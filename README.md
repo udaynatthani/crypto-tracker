@@ -1,12 +1,83 @@
-# React + Vite
+Crypto Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Crypto Tracker is a responsive, real-time cryptocurrency price tracking app built using React and Redux Toolkit. Inspired by CoinMarketCap, it displays live updates of popular cryptocurrencies with a dynamic interface and support for saving favorite coins using localStorage.
+Features
 
-Currently, two official plugins are available:
+    Live tracking of 5 cryptocurrencies: BTC, ETH, USDT, BNB, and SOL
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    Real-time simulation of price and volume updates using setInterval
 
-## Expanding the ESLint configuration
+    Color-coded percentage changes (green for gains, red for losses)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    Global state management using Redux Toolkit
+
+    Favorite coins are saved locally and persist between sessions
+
+    Fully responsive table layout for desktop and mobile
+
+    Static 7-day chart for each coin (extendable to dynamic charts)
+
+Tech Stack
+
+    Frontend: React, Tailwind CSS
+
+    State Management: Redux Toolkit
+
+    Routing: React Router (optional)
+
+    Icons: Lucide React
+
+    Data Source: Sample JSON with simulated updates
+
+    Persistence: localStorage for storing favorites
+
+How It Works
+Real-Time Simulation
+
+The startCryptoUpdater function simulates live data updates using setInterval, refreshing every 1–2 seconds. The updates include:
+
+    Current price
+
+    Percentage changes (1 hour, 24 hours, 7 days)
+
+    24-hour trading volume
+
+Redux State Management
+
+The cryptoSlice.js file manages the application's global state, including coin data and updates.
+
+    The updateAsset action updates coin information in the store
+
+    Selectors are used to minimize unnecessary re-renders
+
+Favorites Feature
+
+Users can mark coins as favorites by clicking the heart icon. These preferences are saved to localStorage and persist across sessions.
+
+![Crypto Tracker UI](./public/logos/screenshot.png)
+
+Folder Structure
+
+src/
+│
+├── assets/            
+├── components/        
+│   ├── CryptoTable.jsx
+│   ├── CryptoRow.jsx
+│   └── PercentageChange.jsx
+│
+├── features/
+│   └── crypto/
+│       ├── cryptoSlice.js
+│       └── sampleData.js
+│
+├── utils/
+│   └── cryptoUpdater.js
+│
+├── App.jsx
+└── main.jsx
+
+Author
+
+Made with care by [Uday Natthani]
+GitHub: https://github.com/udaynatthani
