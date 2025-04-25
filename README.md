@@ -61,7 +61,7 @@ Demo Video/GIF:
   - UI layout
   - Live updates
   - State flow
-![ Demo](./public/crypto-tracker.mp4)
+![ Demo ](./public/crypto-tracker.mp4)
 
 
 
