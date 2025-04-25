@@ -1,5 +1,5 @@
 import { updateAsset } from '../features/crypto/cryptoSlice';
-
+// this is the cryptoupdater function
 export const startCryptoUpdater = (dispatch, getState) => {
   
   const last7dUpdateMap = {};

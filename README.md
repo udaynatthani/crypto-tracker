@@ -56,6 +56,15 @@ Users can mark coins as favorites by clicking the heart icon. These preferences 
 
 ![Crypto Tracker UI](./public/logos/screenshot.png)
 
+Demo Video/GIF:
+- 2–5 min walkthrough showing:
+  - UI layout
+  - Live updates
+  - State flow
+![ Demo](./public/crypto-tracker.mp4)
+
+
+
 Folder Structure
 
 src/

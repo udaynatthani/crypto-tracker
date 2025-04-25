@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { sampleCryptoData } from './sampleData'; 
-
+//Here’s the Redux slice managing state. Each asset is updated via updateAsset
+// which is dispatched from the startCryptoUpdater function
 const initialState = {
   assets: sampleCryptoData, 
 };
